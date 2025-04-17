@@ -1,32 +1,15 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AdvancedImageViewer } from "@/components/avanced.image.viewer";
 
 export default function DashboardPage() {
+  const mockImages = [
+    { name: "Primeira", url: "/img1.jpg" },
+    { name: "Segunda", url: "/img2.jpg" },
+    { name: "Terceira", url: "/img3.jpg" },
+  ];
+
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <Card>
-        <CardHeader>
-          <CardTitle>Usuários</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>120 cadastrados</p>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Relatórios</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>8 gerados hoje</p>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Status do Sistema</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>✅ Online</p>
-        </CardContent>
-      </Card>
+    <div className="max-w-md mx-auto p-4">
+      <AdvancedImageViewer images={mockImages} />
     </div>
   );
 }
